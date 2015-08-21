@@ -2,3 +2,5 @@
 .gitignore/
 html/
 *.html
+*.php
+*.txt
