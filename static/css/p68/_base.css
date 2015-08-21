@@ -1,0 +1,113 @@
+/*!
+ * base - tvbox0001
+ * since p53
+ * create: 2014/5/8
+ */
+
+/* x_wrap */
+.x_wrap{width:640px;height:526px;overflow:hidden;left:0;top:0;}
+
+/* x_date */
+.x_date{font-size:16px;height:26px;line-height:26px;color:#969696;width:580px;text-align:right;top:35px;left:0;}
+
+/* x_lezpay_infoconfirm */
+.x_lezpay_infoconfirm h1{color:#f0f0f0;font-size:26px;line-height:40px;font-weight:500;height:80px;width:530px;left:55px;top:84px;}
+.x_lezpay_infoconfirm p{height:46px;line-height:46px;color:#b4b4b4;font-size:26px;left:70px;top:186px;width:530px;}
+.x_lezpay_infoconfirm p span{font-size:18px;}
+.x_lezpay_infoconfirm label{left:55px;height:28px;line-height:28px;color:#f0f0f0;font-size:18px;}
+.x_lezpay_infoconfirm label input{margin-right:7px;}
+.x_lezpay_infoconfirm label.cb1{top:242px;}
+.x_lezpay_infoconfirm label.cb2{top:288px;}
+.x_lezpay_infoconfirm .smt a.go,
+.x_lezpay_infoconfirm .smt .text{left:55px;}
+.x_lezpay_infoconfirm .smt a.go{top:350px;}
+.x_lezpay_infoconfirm .smt a.back{top:440px;left:345px;}
+.x_lezpay_infoconfirm .smt .text{width:530px;height:60px;line-height:60px;color:#f0f0f0;font-size:26px;text-align:center;top:360px;}
+
+/* x_lezpay_result */
+.x_lezpay_result h3{height:60px;line-height:60px;font-size:30px;color:#fbfbfb;font-weight:500;top:90px;left:170px;width:470px;}
+.x_lezpay_result h3 span{font-size:18px;color:#b4b4b4;}
+.x_lezpay_result .desc{font-size:18px;height:28px;line-height:28px;color:#b4b4b4;top:115px;left:315px;}
+.x_lezpay_result .subtitle{text-align:center;font-size:18px;height:28px;line-height:28px;overflow:hidden;}
+.x_lezpay_result .subtitle.success{color:#969696;}
+.x_lezpay_result .subtitle.fail{color:#f0f0f0;}
+.x_lezpay_result h1{font-size:26px;line-height:40px;font-weight:500;height:80px;overflow:hidden;color:#b4b4b4;top:203px;left:70px;width:500px;}
+.x_lezpay_result p{height:62px;line-height:62px;overflow:hidden;font-size:26px;color:#b4b4b4;top:304px;left:70px;width:500px;}
+.x_lezpay_result p span{font-size:18px; vertical-align: baseline;}
+.x_lezpay_result a{top:410px;}
+.x_lezpay_result a.back{left:260px;}
+.x_lezpay_result a.back2{left:335px;}
+.x_lezpay_result a.again{left:160px;}
+
+/* x_lezpay_choose */
+.x_lezpay_choose h1{font-size:22px;color:#f0f0f0;height:32px;line-height:32px;font-weight:500;top:143px;left:60px;width:580px;}
+.x_lezpay_choose em a{top:238px;}
+.x_lezpay_choose em a.prev{left:30px;}
+.x_lezpay_choose em a.next{left:595px;}
+.x_lezpay_choose .banks a{top:194px;}
+.x_lezpay_choose .banks a.bank1{left:60px;}
+.x_lezpay_choose .banks a.bank2{left:195px;}
+.x_lezpay_choose .banks a.bank3{left:331px;}
+.x_lezpay_choose .banks a.bank4{left:465px;}
+.x_lezpay_choose a.back{top:440px;left:345px;}
+
+/*c*/
+.c_btn {color: #F0F0F0;font-size: 26px;height: 60px;line-height: 60px;text-align: center;width: 530px; top:424px; left:55px;}
+.c_btnsta { left:55px;}
+.c_mistake { color:#B4B4B4; font-size:18px; left:74px; top:209px; width:500px;}
+
+
+/* j_login_box */
+.j_login_box .j_title{color:#646464;font-size:28px;top:68px;left:55px;}
+.j_login_box label{font-size:28px;color:#b4b4b4;}
+.j_login_box .wrap_passw{font-size:28px;color:#b4b4b4;}
+.j_login_box label input{color:#000;}
+.j_login_box b{font-weight:500;font-size:18px;color:#646464;}
+.j_login_box .text{width:210px;}
+.j_login_box .j_userid {top:169px;}
+.j_login_box .j_userid b{color:#f00;}
+.j_login_box .j_userid .textid{width:370px;}
+.j_login_box .j_passw {top:230px;}
+.j_login_box .j_passw .hint{font-size:18px;}
+.j_login_box .passw,.j_login_box .pay{top:185px;}
+.j_login_box .pay{left:154px;}
+.j_login_box .error{color:#f06e00;font-size:18px;}
+.j_login_box .login-error,.j_login_box .card-error,.j_login_box .input-error{top:280px;}
+
+/* begin p54  */
+/*j_box*/
+.j_box .j_p54 p{width:100%;}
+.j_box .j_p54 input{color:#000;}
+.j_box .j_p54 .title{color:#646464;font-size:28px;top:68px;left:55px;}
+.j_box .j_p54 .bank_name{text-align:right;width:256px;left:0;}
+.j_box .j_p54 .bank_cont{width:384px;left:271px;}
+.j_box .j_p54 .bank_cont b{font-size:18px;font-weight:500;}
+.j_box .j_p54 .ps-top{top:108px;}
+.j_box .j_p54 .ps-tops{top:136px;}
+.j_box .j_p54 .ps-topx{top:141px;}
+.j_box .j_p54 .ps-topm{top:187px;}
+.j_box .j_p54 .ps-topl{top:192px;}
+.j_box .j_p54 .errors{color:#cb6018;font-size:18px;}
+.j_box .j_p54 .input-sm{width:180px;}
+.j_box .j_p54 .input-md{width:250px;}
+.j_box .j_p54 .input-lg{width:370px;}
+.j_box .j_p54 .bank_car{text-align:right;width:180px;left:0px;}
+.j_box .j_p54 .bank_text{width:384px;left:197px;}
+.j_box .j_p54 .gain_name{width:215px;text-align:right;left:0;}
+.j_box .j_p54 .gain_text{width:384px;left:232px;}
+.j_box .j_p54 .smt a.back2{top:440px;left:55px;}
+/* j_plz17 */
+.j_plz17 .gain{left:427px;}
+/* end p54 
+
+/*p60 begin*/
+
+.c_paylist { font-size:28px; color:#969696; position:absolute; top:66px; left:56px;}
+.c_payinfo { font-size:18px; color:#969696; position:absolute; top:110px; left:56px;}
+.c_payimg { position:absolute; top:191px; left:56px; width:250px; height:250px;}
+.c_paydone { position:absolute; top:350px; left:345px;}
+.c_leavepay { position:absolute; top:441px; left:345px;}
+.c_payback { position:absolute; top:411px; left:238px;}
+
+/*p60 end*/
+ 
