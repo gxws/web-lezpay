@@ -2,7 +2,7 @@
  * base - tvbox0001
  * since p53
  * create: 2014/5/8
- */ 
+ */
 
 /* public */
 /* font-size */
@@ -158,10 +158,12 @@
 .j_cup .cupbox_code .error{left:288px;top:321px;}
 .j_cup .maintain_info{left:0;width:640px;top:259px;text-align:center;font-size:18px;color:#b4b4b4;}
 .j_cup .maintain_btn{left:209px;top:411px;}
-.j_cup .qr .qr_img{width:220px;height:220px;left:215px;top:156px;}
+.j_cup .qr .qr_img{width:296px;height:296px;left:30px;top:111px;}
 .j_cup .qr .qr_btn1{left:80px;}
 .j_cup .qr .qr_btn2{left:335px;}
 .j_cup .qr .qr_btn3{left:220px;}
+.j_cup .qr .qr_btn4{left:367px;top:287px;}
+.j_cup .qr .qr_btn5{left:367px;top:356px;}
 
 /* p79 */
 /* j_wrap */

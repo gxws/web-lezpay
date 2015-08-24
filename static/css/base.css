@@ -483,11 +483,11 @@ input::-moz-focus-inner{padding:0;border:0;}
 .j_cuppay .cup_user .code_btnbox{min-height:64px;}
 .j_cuppay .cup_user .user_box{min-height:289px;}
 .weixin_title{width:75px;height:50px;line-height:50px;padding-left:100px;background:#283a4e url(../images/0002_weixin.png) 30px 7px no-repeat;}
+.weixin .right{height:281px;}
 .weixin .box{min-height:274px;}
 .weixin .info{line-height:60px;font-size:18px;color:#909090;}
 .weixin .qr{display:inline-block;width:210px;height:210px;}
 .weixin .btn_box{padding-top:16px;}
-.weixin .btn span{min-width:234px;}
 .weixin .busy{margin-top:71px;width:48px;height:77px;display:inline-block;background:url(../images/0002_busy.png) 0 0 no-repeat;}
 .weixin .busy_info{padding-left:126px;font-size:30px;color:#fbfbfb;line-height:60px;}
 .j_cuppay .zfb_title{width:175px;height:50px;background:#283a4e url(../images/0002_zfb.png) 36px 10px no-repeat;}
@@ -541,11 +541,10 @@ input::-moz-focus-inner{padding:0;border:0;}
 .weixin .info{font-size:28px;line-height:80px;}
 .weixin .qr{width:280px;height:280px;}
 .weixin .btn_box{padding-top:18px;}
-.weixin .btn span{min-width:306px;}
 .weixin .busy{margin-top:115px;width:81px;height:131px;background:url(../images/0003_busy.png) 0 0 no-repeat;}
-.weixin .busy_info{padding-left:366px;font-size:44px;color:;line-height:80px;}
+.weixin .busy_info{padding-left:366px;font-size:44px;line-height:80px;}
 .j_cuppay .zfb_title{width:258px;height:81px;background:#283a4e url(../images/0003_zfb.png) 76px 22px no-repeat;}
-} 
+}
 /* p79 */
 /* j_pay */
 .j_pay .my_info{line-height:53px;}
