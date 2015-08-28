@@ -27,7 +27,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .header{min-height:89px;}
 /* footer */
 .footer{position:absolute;left:0;bottom:0;width:100%;}
-.footer{width:555px;height:56px;background-repeat:no-repeat;background-image:url(../images/bg_x_papago_footer.png);padding-left:85px;}
+.footer{width:640px;height:56px;background-repeat:no-repeat;background-image:url(../images/p62_0002_footer_bg1.jpg);}
 .footer.paging{background:url(../images/p62_0002_footer_bg2.jpg) 0 0 no-repeat;}
 .footer.delete{background:url(../images/p62_0002_footer_bg3.jpg) 0 0 no-repeat;}
 .footer.input{background:url(../images/p62_0002_footer_bg4.jpg) 0 0 no-repeat;}
@@ -42,7 +42,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .footer li .home { background-image:url(../images/640_foot_home.png);}
 .footer li .prev { background-image:url(../images/640_foot_prev.png);}
 @media (min-width:1280px){
-.footer{width:1280px;height:85px;background-image:url(../images/bg_x_papago_footer_hd.png); padding-left:146px;}
+.footer{width:1280px;height:85px;background-image:url(../images/p62_0003_footer_bg1.jpg);}
 .footer.paging{background:url(../images/p62_0003_footer_bg2.jpg) 0 0 no-repeat;}
 .footer.delete{background:url(../images/p62_0003_footer_bg3.jpg) 0 0 no-repeat;}
 .footer.input{background:url(../images/p62_0003_footer_bg4.jpg) 0 0 no-repeat;}
@@ -1038,3 +1038,58 @@ input::-moz-focus-inner{padding:0;border:0;}
 
 }
 /********************** end p131 ************************/
+
+/* j_weixin */
+.j_weixin .container{
+	height:383px;
+}
+.j_weixin .container .pic-phone{
+	width:229px;
+	height:355px;
+	background:url(../images/phone.png);
+	left:30px;
+	top:20px;
+}
+.j_weixin .container .weixin-info{
+	width:310px;
+	font-size:28px;
+	left:280px;
+	top:45px;
+	line-height:40px;
+}
+.j_weixin .smt_bx .btn{
+	min-width:250px;
+	margin-bottom:20px;
+}
+.j_weixin .container .weixin-btn-box{
+	left:270px;
+	top:200px;
+}
+@media (min-width:1280px){
+	/* j_weixin */
+.j_weixin .container{
+	height:502px;
+}
+.j_weixin .container .pic-phone{
+	width:385px;
+	height:469px;
+	background:url(../images/phone_HD.png);
+	left:181px;
+	top:25px;
+}
+.j_weixin .container .weixin-info{
+	width:500px;
+	font-size:40px;
+	left:604px;
+	top:40px;
+	line-height:50px;
+}
+.j_weixin .smt_bx .btn{
+	min-width:340px;
+	margin-bottom:30px;
+}
+.j_weixin .container .weixin-btn-box{
+	left:592px;
+	top:260px;
+}
+}

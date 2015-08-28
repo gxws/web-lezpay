@@ -138,7 +138,7 @@
 .blank_3 a{top:396px;}
 /* j_cup */
 .j_cup .cup_id_btn{top:327px;}
-.j_cup .a_pay{position:absolute;width:216px;height:22px;left:184px;top:50px;color:#648cb4;font-size:24px;}
+.j_cup .a_pay{position:absolute;width:216px;height:22px;left:190px;top:50px;color:#648cb4;font-size:24px;}
 .j_cup .input{border:0;height:40px;font-size:26px;}
 .j_cup .input_id{width:338px;left:210px;top:195px;}
 .j_cup .error{font-size:18px;color:#fabe00;}
@@ -164,6 +164,8 @@
 .j_cup .qr .qr_btn3{left:220px;}
 .j_cup .qr .qr_btn4{left:367px;top:287px;}
 .j_cup .qr .qr_btn5{left:367px;top:356px;}
+.j_cup .qr .qr_btn6{left:280px;top:295px;}
+.j_cup .qr .qr_btn7{left:280px;top:365px;}
 
 /* p79 */
 /* j_wrap */
