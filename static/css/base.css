@@ -27,12 +27,13 @@ input::-moz-focus-inner{padding:0;border:0;}
 .header{min-height:89px;}
 /* footer */
 .footer{position:absolute;left:0;bottom:0;width:100%;}
-.footer{width:555px;height:56px;background-repeat:no-repeat;background-image:url(../images/bg_x_papago_footer.png);padding-left:85px;}
+.footer{width:640px;height:56px;background-repeat:no-repeat;background-image:url(../images/p62_0002_footer_bg1.jpg);}
 .footer.paging{background:url(../images/p62_0002_footer_bg2.jpg) 0 0 no-repeat;}
 .footer.delete{background:url(../images/p62_0002_footer_bg3.jpg) 0 0 no-repeat;}
 .footer.input{background:url(../images/p62_0002_footer_bg4.jpg) 0 0 no-repeat;}
 .footer.f4{background-image:url(../images/bg_x_papago_footer_f4.png);}
 .footer.pg{background-image:url(../images/bg_x_papago_footer_pg.png);}
+.footer.btns{width:555px;height:56px;background-repeat:no-repeat;background-image:url(../images/bg_x_papago_footer.png);padding-left:85px;}
 .footer li { float:left; display:block; width:92px; height:56px; line-height:56px; background:url(../images/640_foot_li.png) right no-repeat;}
 .footer li a { color:#969696; display:block; font-size:16px; width:92px; height:56px;}
 .footer li a:focus {background-image:url(../images/640_foot_bgho.png); color:#fff;}
@@ -42,7 +43,8 @@ input::-moz-focus-inner{padding:0;border:0;}
 .footer li .home { background-image:url(../images/640_foot_home.png);}
 .footer li .prev { background-image:url(../images/640_foot_prev.png);}
 @media (min-width:1280px){
-.footer{width:1280px;height:85px;background-image:url(../images/bg_x_papago_footer_hd.png); padding-left:146px;}
+.footer{width:1280px;height:85px;background-image:url(../images/p62_0003_footer_bg1.jpg);}
+.footer.btns{width:1280px;height:85px;background-image:url(../images/bg_x_papago_footer_hd.png); padding-left:146px;}
 .footer.paging{background:url(../images/p62_0003_footer_bg2.jpg) 0 0 no-repeat;}
 .footer.delete{background:url(../images/p62_0003_footer_bg3.jpg) 0 0 no-repeat;}
 .footer.input{background:url(../images/p62_0003_footer_bg4.jpg) 0 0 no-repeat;}
