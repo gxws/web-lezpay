@@ -265,7 +265,8 @@
 .k_box_p119 .text em{font-style:normal;font-weight:normal;color:#ff0000;}
 .c_p119box .text2{font-size:16px;line-height:25px;color:#c8c8c8;width:262px;top:145px;left:350px;}
 .c_p119box .text2 a {color:#14d2ff;}
-.c_p119box .text3{font-size:16px;line-height:25px;color:#c8c8c8;width:262px;top:352px;left:330px;}
+.c_p119box .text3{font-size:16px;line-height:25px;color:#c8c8c8;width:262px;top:302px;left:330px;}
+.c_p119box .info-text{width:580px;left:30px;top:332px;font-size:16px;color:#c8c8c8;}
 .c_p119box .text3 a {color:#14d2ff;}
 .k_box_p119 .over{left:370px;top:195px;}
 .k_box_p119 .return{left:370px;top:265px;}
@@ -275,9 +276,9 @@
 .k_box2_p119 .zhang{width:555px;height:150px;top:60px;left:30px;font-size:30px;color:#fffefe;}
 .k_box2_p119 .zhang .name{top:0;left:0;}
 .k_box2_p119 .zhang .email{top:0;left:225px;height:100%;width:315px;word-wrap:break-word;word-spacing:normal;overflow:hidden;}
-.k_box2_p119 .sure{left:208px;top:216px;}
+.k_box2_p119 .sure{left:208px;top:176px;}
 .k_box2_p119 .next{left:319px;top:310px;}
-.k_box2_p119 .other{left:208px;top:284px;}
+.k_box2_p119 .other{left:208px;top:244px;}
 
 /* k_box_p119 */
 .k_box3_p119 .codeBg{width:295px;height:295px;background:#fff;top:22px;left:30px;}
@@ -307,3 +308,7 @@
 .j_zfb .info{width:255px;left:355px;top:83px;}
 .j_zfb .h1{font-size:30px;width:100%;top:104px;left:0;}
 /********************** end p119 ************************/
+
+.j_on-key .info-b{font-size:24px;left:30px;width:580px;top:60px;}
+.j_on-key .info-text1{left:66px;top:244px;}
+.j_on-key .info-text2{left:66px;top:300px;}

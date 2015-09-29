@@ -79,7 +79,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 /* date */
 .date{position:absolute;top:40px;right:30px;min-width:140px;min-height:20px;display: inline-block;font-size: 16px;color:#dcdcdc;}
 @media (min-width:1280px){
-.date{font-size:22px;top:0;right:-35px;min-width:190px;}
+.date{font-size:22px;min-width:190px;}
 }
 /* progress */
 .progress{width:545px;margin:59px auto 0;height:2px;background:#1e2d3c;position:relative;}
@@ -945,13 +945,15 @@ input::-moz-focus-inner{padding:0;border:0;}
 
 /* k_p119_footer */
 .k_p119_footer{width:580px;margin:0 auto;line-height:20px;padding-top:0;}
+.k_p119_footer.pt{padding-top:20px;margin-top:-65px;}
 @media screen and (min-width:1280px){
 .k_p119_footer{font-size:24px;width:92%;padding:0 48px;line-height:30px;}
+.k_p119_footer.pt{padding-top:30px;margin-top:-90px;}
 }
 
 /* k_p119_body2 */
 .k_p119_body2{width:580px;height:380px;margin:0 auto;}
-.k_p119_body2 .text{width:100%;margin:0 auto;font-size:30px;color:#fffefe;padding-top:60px;line-height:46px;height:135px;}
+.k_p119_body2 .text{width:100%;margin:0 auto;font-size:30px;color:#fffefe;padding-top:60px;height:96px;}
 .k_p119_body2 .text dd{width:240px;}
 .k_p119_body2 .text dt{height:100%;width:340px;word-wrap:break-word;word-spacing:normal;}
 .k_p119_body2 .btns{padding:20px 0;}
@@ -959,7 +961,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .k_p119_body2 .btns div:first-child{padding-bottom:20px;}
 @media screen and (min-width:1280px){
 .k_p119_body2{width:814px;height:500px;}
-.k_p119_body2 .text{font-size:44px;padding-top:98px;line-height:56px;height:170px;}
+.k_p119_body2 .text{font-size:44px;padding-top:98px;line-height:56px;height:117px;}
 .k_p119_body2 .text dd{width:352px;}
 .k_p119_body2 .text dt{width:462px;}
 .k_p119_body2 .btns{padding-top:14px;}
@@ -1068,29 +1070,52 @@ input::-moz-focus-inner{padding:0;border:0;}
 }
 @media (min-width:1280px){
 	/* j_weixin */
-.j_weixin .container{
-	height:502px;
+	.j_weixin .container{
+		height:502px;
+	}
+	.j_weixin .container .pic-phone{
+		width:385px;
+		height:469px;
+		background:url(../images/phone_HD.png);
+		left:181px;
+		top:25px;
+	}
+	.j_weixin .container .weixin-info{
+		width:500px;
+		font-size:40px;
+		left:604px;
+		top:40px;
+		line-height:50px;
+	}
+	.j_weixin .smt_bx .btn{
+		min-width:340px;
+		margin-bottom:30px;
+	}
+	.j_weixin .container .weixin-btn-box{
+		left:592px;
+		top:260px;
+	}
 }
-.j_weixin .container .pic-phone{
-	width:385px;
-	height:469px;
-	background:url(../images/phone_HD.png);
-	left:181px;
-	top:25px;
-}
-.j_weixin .container .weixin-info{
-	width:500px;
-	font-size:40px;
-	left:604px;
-	top:40px;
-	line-height:50px;
-}
-.j_weixin .smt_bx .btn{
-	min-width:340px;
-	margin-bottom:30px;
-}
-.j_weixin .container .weixin-btn-box{
-	left:592px;
-	top:260px;
-}
+
+.one-click .info{font-size:24px;width:580px;padding:58px 30px 0;}
+.one-click .smt_bx.radio {padding-top:30px;}
+.one-click .smt_bx.radio input{display:none;}
+.one-click .smt_bx.radio .btn{font-size:18px;text-align:left;margin-bottom:30px;background-image:none;}
+.one-click .smt_bx.radio .btn:after{background-image:none;}
+.one-click .smt_bx.radio .btn:focus:after{width:20px;height:70px;background:url(../images/640_md_btn.png) -620px -55px no-repeat;right:-15px;top:-10px;}
+.one-click .smt_bx.radio .btn:focus{background:url(../images/640_md_btn.png) 0 0;}
+.one-click .smt_bx.radio .btn span{padding-left:40px;min-width:518px;position:relative;}
+.one-click .smt_bx.radio .btn span:after{width:25px;height:25px;display:block;position:absolute;left:10px;top:13px;content:"";background:url(../images/radio.png) 0 0 no-repeat;}
+.one-click .smt_bx.radio .btn.active span:after{background:url(../images/radio_checked.png) 0 0 no-repeat;}
+.one-click .smt_bx.radio .btn small{font-size:14px;}
+@media (min-width:1280px){
+.one-click .info{font-size:36px;width:1090px;padding:90px 95px 0;}
+.one-click .smt_bx.radio {padding-top:45px;}
+.one-click .smt_bx.radio .btn{font-size:28px;margin-bottom:25px;}
+.one-click .smt_bx.radio .btn:focus:after{width:30px;height:95px;background:url(../images/1280_md_btn_01.png) -1250px -70px no-repeat;right:-20px;top:-15px;}
+.one-click .smt_bx.radio .btn:focus{background:url(../images/1280_md_btn_01.png) 0 0;}
+.one-click .smt_bx.radio .btn span{padding-left:60px;min-width:848px;position:relative;}
+.one-click .smt_bx.radio .btn span:after{width:30px;height:30px;display:block;position:absolute;left:10px;top:17px;content:"";background:url(../images/radio_HD.png) 0 0 no-repeat;}
+.one-click .smt_bx.radio .btn.active span:after{background:url(../images/radio_checked_HD.png) 0 0 no-repeat;}
+.one-click .smt_bx.radio .btn small{font-size:24px;}
 }
