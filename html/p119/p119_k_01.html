@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<!-- begin html -->
+<html>
+
+<!-- begin head -->
+<head>
+<title>PT-59-支付宝账户授权并支付</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="Author" content="xiek" />
+<meta name="Keywords" content="xiek" />
+<meta name="Description" content="xiek" />
+
+<!-- begin mobile -->
+<!--
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+-->
+<!-- end mobile -->
+
+<!-- begin style -->
+
+<link rel="stylesheet" type="text/css" href="../static/public/css/public.css" />
+<link rel="stylesheet" type="text/css" href="../static/web-lezpay/css/base.css" />
+
+<!-- <link rel="stylesheet" type="text/css" href="http://10.1.15.50:7002/web-lezpay/css/base.mod.css" /> -->
+<!-- end style -->
+
+</head>
+<!-- end head -->
+
+<!-- begin body -->
+<body>
+<!-- begin wrap -->
+<div class="wrap">
+	<!-- begin DIY -->
+	<div class="">
+		<!-- begin header -->
+		<div class="header auto">
+	  	<!-- begin title_bx 标头,title禁用时 cont类加上 add类-->
+			<div class="title_bx fl auto">
+				<div class="title fl tc k_p119_title"><i></i></div>
+				<div class="cont fl">授权账户并支付</div>
+				<div class="end fl"></div>
+	  	</div>
+	  	<!-- end title_bx -->
+	  	<div class="date J_x_date fr">2014|05|09|13|59|55</div>
+	</div>
+	  <!-- end header -->
+	  <!-- begin container -->
+	<div class="container">
+		<div class="k_p119_body">
+			<!-- ajax请求地址为img的自定义属性twoCode,发送内容为空,请求内容为{"status":"200","finished":"true"},请求频率为3s一次. -->
+			<div class="fl left"><img class="pa J_k_twoCode" twoCode="javascript:;" codehref="http://baidu.com" src="../static/web-lezpay/images/demo_k_p119_01.jpg"/></div>
+			<div class="auto right">
+				<div class="top">
+					<p>使用手机扫码完成付款<span>{1234.56}</span>元，并为您的支付宝账户授权在网视用户{注册手机号}开通支付功能。</p>
+					<p class="tishi">授权后小额支付无需再输入支付宝支付密码</p>
+				</div>
+				<div class="bottom">
+					<div class="smt_bx tc firstbtn J_k_firstbtn">
+						<a href="./p119_k_02.html" class="btn J_x_focus"><span>已完成付款</span></a>
+					</div>
+					<div class="smt_bx tc">
+						<a href="./p119_k_02.html" class="btn"><span>放弃授权，返回</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="k_p119_footer">
+			温馨提示：若需取消授权，只需登录支付宝官网，在【账户设置】→【应用授权】进行操作即可。
+		</div>
+	</div>
+	  <!-- end container -->
+	</div>
+	<!-- end DIY -->
+	<!-- begin bottom -->
+	<div class="footer"></div>
+	<!-- end bottom -->
+</div>
+<!-- end wrap -->
+<!-- begin javascript -->
+
+<script type="text/javascript" src="../static/public/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.x.min.js"></script>
+<script type="text/javascript" src="../static/web-lezpay/js/base.js"></script>
+<script type="text/javascript" src="../static/web-lezpay/js/baseAjax.js"></script>
+
+<!-- <script type="text/javascript" src="http://10.1.15.50:7002/web-lezpay/js/base.mod.js"></script>  -->
+<!-- end javascript -->
+
+</body>
+<!-- end body -->
+
+</html>
+<!-- end html -->

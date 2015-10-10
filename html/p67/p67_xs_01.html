@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+<!-- begin html -->
+<html>
+
+<!-- begin head -->
+<head>
+<title>PT-16-银联支付页面整合</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="Author" content="jiqingjian" />
+<meta name="Keywords" content="jiqingjian" />
+<meta name="Description" content="jiqingjian" />
+
+<!-- begin mobile -->
+<!--
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+-->
+<!-- end mobile -->
+
+<!-- begin style -->
+
+<!--<link rel="stylesheet" type="text/css" href="../../../public/css/public.css" />-->
+<!--<link rel="stylesheet" type="text/css" href="../../static/css/base.css" />--->
+<link rel="stylesheet" type="text/css" href="http://10.1.15.50:8000/static/web-lezpay/css/base.mod.css" />
+<!-- end style -->
+<style>
+	.spanNAV a{padding: 0 5px;margin-left: 5px;}
+	.spanNAV a:focus{border: 1px solid red;}
+	.container{position: relative;}
+	.wxs-date{left: 500px;top: 10px;}
+		.x_input input:focus{background: transparent url("../../static/images/bg_x_input.png") no-repeat scroll 0 -117px}
+		.x_input input:focus + span{background: transparent url("../../static/images/bg_x_input.png") no-repeat scroll -620px -175px}
+		.mt{margin-top:50px; } .mt40{margin-top: 20px;} .mt130{margin-top: 115px;}
+		.wxs-error-p1{position: absolute;left: 30px;top: 25px;width: 480px !important;text-align: center !important;padding: 0 !important;margin-left:55px;}
+		.wxs-error-p2{position: absolute;left: 215px;top: -10px;}
+		.wxs-error-p3{position: absolute;left: 215px;top: 10px;}
+		.wxs-error-p4{position: absolute;left: 196px;top: 95px;}
+		.wxs-btn_box-p1{position: absolute;top: 160px;left: 130px;}
+		.wxs-btn_box-p2{position: absolute;top: 200px;left: 135px;}
+		.wxs-btn_box-p3{position: absolute;top: 265px;left: 135px;}
+		 .wxs-btn_box-p4{position: absolute;top: 210px;left: 205px;}
+
+	.wxs_p1_wz{position: absolute;left: 440px;top: 300px;}
+	.wxs_p2_wz{position: absolute;left: 440px;top: 280px;}
+	.wxs_p3_wz{position: absolute;left: 440px;top: 335px;}
+	.wxs_Change_p2wz{position: absolute;left: 460px;top: 15px;}
+	.wxs_Change_p3wz{position: absolute;left: 460px;top: 35px;}
+	.wxs_p2_formwz{position: absolute;left: 0;top: 0;}
+
+	.wxs-cup_label-p1{color:#DCDCDC;font-size:26px;line-height: 20px;}
+	.wxs-cup_label-p4{color:#DCDCDC;font-size:26px;line-height: 58px;}
+	.wxs-codeBtn{position: absolute;left:410px;top: 110px;padding: 0 20px 0 0}
+	.wxs-codeBtn span{padding: 0 20px 0 40px}
+	.wxs-dt dt{width: 180px!important;margin-top: 115px;}
+
+		.wxs_btn{width:165px;height: 30px;;position: relative;;background: url("../../static/images/p67_wxs_btn.png") no-repeat}
+		.wxs_btn a:focus:after{content: '';position: absolute;left: -5px;top: -5px; width: 175px;height: 40px;background: url("../../static/images/p67_wxs_btn_fos.png") no-repeat 0 0}
+		.wxs_btn a{display:block ;font-size: 18px;color: #fff;line-height: 30px;text-align: center}
+
+		.ml-p5 em{margin-left: 100px;}
+
+	.wxs-note-png-p2{width: 545px;height: 264px;background: url('../../static/images/p67_wxs_note_3.png')no-repeat;position:absolute;left: 43px;top: -60px;z-index: 2}
+	.wxs-note-btn_box-p3{position: absolute;top: 300px;left: 300px;}
+	.wxs-note-btn_box-p3 span{padding: 0 0 0 20px;}
+
+
+	.wxs-note-png-p3{width: 389px;height: 250px;background: url('../../static/images/p67-wxs-note-p4.png')no-repeat;position:absolute;left: 57px;top: 79px;z-index: 2}
+	.wxs-note-png-p4{width: 388px;height: 192px;background: url('../../static/images/p67-wxs-note-p3.png')no-repeat;position:absolute;left: 44px;top: 5px;z-index: 2}
+	.wxs-note-png-p5{width: 555px;height: 254px;background: url('../../static/images/p67-wxs-note-p5.png')no-repeat;position:absolute;left: 42px;top: 3px;z-index: 2}
+	.wxs-note-btn_box-p4{position: absolute;top: 330px;left: 300px;}
+	.wxs-note-btn_box-p4 span{padding: 0 0 0 30px;}
+
+	.wxs-note-btn_box-p2{position: absolute;top: 250px;left: 300px;}
+	.wxs-note-btn_box-p2 span{padding: 0 50px 0 80px;}
+	.select_btn{width: 540px!important;}
+
+
+
+	@media (min-width: 1280px) {   /*大窗口*/
+		.select_btn{width: 838px!important;}
+		.x_input input:focus{background: transparent url("../../static/images/bg_x_input_1280.png") no-repeat scroll 0 -165px}
+		.x_input input:focus + span{background: transparent url("../../static/images/bg_x_input_1280.png") no-repeat scroll -1250px -248px}
+		.wxs-date{left: 1050px;top: 20px;}
+		.wxs-date em,.wxs-date span{font-size: 24px}
+		.mt{margin-top:70px; } .mt40{margin-top: 40px;}
+		.container .wxs-error-p1{position: absolute;left: 18px;top: 10px;font-size: 30px;width: 680px !important;text-align: center !important;padding: 0 !important;margin-left: 300px;}
+		.container .wxs-error-p2{position: absolute;left: 460px;top: -20px;font-size: 30px;}
+		.container .wxs-error-p3{position: absolute;left: 460px;top: 20px;font-size: 30px;}
+		.container .wxs-error-p4{position: absolute;left: 520px;top: 100px;font-size: 30px;}
+		.container .wxs-btn_box-p1{position: absolute;top: 240px;left: 463px;}
+		.container .wxs-btn_box-p4{position: absolute;top: 250px;left: 510px;}
+		.container .wxs-btn_box-p4 span{padding:0 20px 0 50px}
+
+		.container .wxs-btn_box-p2{position: absolute;top: 280px;left: 360px;}
+		.container .wxs-btn_box-p2  span{padding: 0 50px 0 80px}
+		.container .wxs-btn_box-p3{position: absolute;top: 380px;left: 360px;}
+		.container .wxs-btn_box-p3  span{padding: 0 50px 0 80px}
+
+		.wxs_p1_wz{position: absolute;left: 930px;top: 420px;}
+		.wxs_p2_wz{position: absolute;left: 940px;top: 313px;}
+		.wxs_p3_wz{position: absolute;left: 940px;top: 413px;}
+		.wxs_Change_p2wz{position: absolute;left: 890px;top: 15px;}
+		.wxs_Change_p3wz{position: absolute;left: 890px;top: 55px;}
+
+		.wxs-cup_label-p1{color:#DCDCDC;font-size:36px;line-height: 26px;}
+		.wxs-cup_label-p4{color:#DCDCDC;font-size:36px;line-height: 83px;}
+		.wxs-codeBtn{position: absolute;left: 855px;top: 130px;padding: 0 50px 0 0}
+		.wxs-codeBtn span{padding: 0 30px 0 60px}
+
+		.wxs-dt dt{width: 500px!important;margin-top: 135px;}
+
+		.wxs_btn{width:270px;height: 45px;position: relative;;background: url("../../static/images/p67_wxs_btn_1280.png") no-repeat}
+		.wxs_btn a:focus:after{content: '';position: absolute;left:-10px;top:-10px; width: 290px;height: 65px;background: url("../../static/images/p67_wxs_btn_fos_1280.png") no-repeat}
+		.wxs_btn a{display:block ;font-size: 26px;color: #fff;line-height: 45px;}
+
+		.ml-p5 em{margin-left: 130px;}
+
+		.wxs-note-png-p2{width: 874px;height: 396px;background: url('../../static/images/p67_wxs_note_3_1280.png')no-repeat;position:absolute;left: 223px;top: -95px;z-index: 2}
+		.wxs-note-btn_box-p3{position: absolute;top: 400px;left: 700px;}
+		.wxs-note-btn_box-p3 span{padding: 0 0 0 30px;}
+
+		.wxs-note-png-p3{width: 680px;height: 349px;background: url('../../static/images/p67-wxs-note-p4-1280.png')no-repeat;position:absolute;left: 113px;top: 130px;z-index: 2}
+		.wxs-note-png-p4{width: 613px;height: 311px;background: url('../../static/images/p67-wxs-note-p3-1280.png')no-repeat;position:absolute;left: 186px;top: -26px;z-index: 2}
+		.wxs-note-png-p5{width: 856px;height: 393px;background: url('../../static/images/p67-wxs-note-p5-1280.png')no-repeat;position:absolute;left: 223px;top: -6px;z-index: 2}
+		.wxs-note-btn_box-p4{position: absolute;top: 400px;left: 700px;}
+		.wxs-note-btn_box-p4 span{padding: 0 0 0 30px;}
+		.wxs-note-btn_box-p2{position: absolute;top: 300px;left: 700px;}
+		.wxs-note-btn_box-p2 span{padding: 0 65px 0 95px;}
+		/*写到这里，把他们复制到标清的样式中*/
+	}
+</style>
+</head>
+<!-- end head -->
+
+<!-- begin body -->
+<body>
+<!-- begin j_wrap -->
+<div class="j_wrap J_j_wrap">
+	<!-- begin j_pay -->
+	<div class="j_cuppay">
+		<!-- begin header -->
+	  <div class="header auto">
+	  	<div class="cup_box fl auto">
+	  		<div class="cup_title fl"></div>
+	  		<div class="cup_pay fl">付款{27950}元</div>
+				<div class="cup_after fl"></div>
+	  	</div>
+	  	<div class="wxs-date date t_time pa"><em>3月13日</em> <span>10:53</span></div>
+		 <span class="spanNAV">
+			 <ul>
+				 <li><a href="#" style="color: #fff;font-size: 22px;float: left;;">0</a></li>
+				 <li><a href="#" style="color: #fff;font-size: 22px;float: left;;">1</a></li>
+				 <li><a href="#" style="color: #fff;font-size: 22px;float: left;;">2</a></li>
+				 <li><a href="#" style="color: #fff;font-size: 22px;float: left;;">3</a></li>
+				 <li><a href="#" style="color: #fff;font-size: 22px;float: left;;">4</a></li>
+				 <li><a href="#" style="color: #fff;font-size: 22px;float: left;;">5</a></li>
+				 <li><a href="#" style="color: #fff;font-size: 22px;float: left;;">6</a></li>
+			 </ul>
+		 </span> <!--临时导航-->
+	  </div>
+	  <!-- end header -->
+		  <!-- begin container -->
+		<div>
+			<div class="list_0 hide container cup_id tc auto" style="position: relative">
+				<form class="">
+				<div class="wxs_btn  wxs_p1_wz" style="position: absolute;">
+					<a  href="javascript:">选择其他付款方式</a>
+				</div>
+
+					<!-- begin input -->
+					<div class="x_input J_x_input cup_label tl auto">
+						<em class="fl">银行卡号</em>
+						<input type="text" onfocus="this.value=this.value.replace(/\D/g,'')" min="16" maxlength="19" oninput="this.value=this.value.replace(/\D/g,'')"   onblur='this.value=bankNumber(this.value)' value=""  data-type="id" class=" J_wxs"  verify="bankNumber" data-help="p67_x_9.html" />
+						<span></span>
+					</div>
+					<!-- end input -->
+					<!-- begin error -->
+
+					<div class="error wxs-error-p1  WXS_j_error">错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示</div>
+					<!-- end error -->
+
+					<div class="wxs-btn_box-p1  tc" style="padding-top: 0;">
+						<a class="x_btn btn " onclick="sum(this)" href="javascript:">
+							<span>下一步，输入短信验证码</span>
+						</a>
+					</div>
+				</form>
+			</div>  <!--银行卡号输入界面-->
+			<div class="list_1 hide container ">
+				<form class=" mt">
+					<div class="user_box">
+						<div class="form_box auto wxs_p2_formwz">
+
+							<dl class="tl auto"  >
+								<dt  class="wxs-cup_label-p1"  ><em class="fr" >农业银行</em></dt>
+								<dd class="cup_label">
+									<em style="padding:0">（储蓄卡）6228****0118</em >
+								</dd>
+							</dl>
+
+							<dl class="tl auto">
+								<dt class="cup_label"><em class="fr">取款密码</em></dt>
+								<dd class="x_input J_x_input cup_label">
+									<input type="text" oninput="this.value=this.value.replace(/\D/g,'')" min="6" maxlength="6" verify="password"  class="J_wxs" data-type="withdrawal" />
+									<span></span>
+									<em class="fl">6位数字</em>
+								</dd>
+							</dl>
+
+							<dl class=" tl auto">
+								<dt class="cup_label"><em class="fr">预留手机号</em></dt>
+								<dd class="x_input J_x_input cup_label">
+									<input type="text" oninput="this.value=this.value.replace(/\D/g,'')" min="11" maxlength="11" verify="phone"  class="J_wxs" data-type="phone"  />
+									<span></span>
+								</dd>
+							</dl>
+						</div>
+						<!-- end error -->
+					</div>
+
+					<div class=" tc wxs-btn_box-p2">
+						<a href="javascript:" onclick="sum(this)" class="x_btn btn ">
+							<span>下一步，输入短信验证码</span>
+						</a>
+					</div>
+					<div class="error wxs-error-p2  WXS_j_error ">错误提示</div>
+					<div class="wxs_btn  wxs_p2_wz" style="position: absolute">
+						<a  href="javascript:">选择其他付款方式</a>
+					</div>
+					<div class="wxs_btn  wxs_Change_p2wz" style="position: absolute;">
+						<a  href="javascript:">更换其他银行卡</a>
+					</div>
+
+
+				</form>
+			</div> <!--储蓄卡输入界面-->
+			<div class="list_2 hide container " style="position: relative">
+
+				<div class="J_switchover-p2 wxs-note-png-p2 hide" ></div>
+				<div class="J_switchover-p2 hide" style="width: 100%;height: 100%;background: rgba(0, 0, 0, 0.80);position: fixed;left: 0;top: 0;z-index: 1"></div>
+				<div class="J_switchover-p2 btn_box tc wxs-note-btn_box-p3 hide" style="z-index: 3;display: none;">
+					<a href="javascript:" onclick="switchover('.J_switchover-p2')" class="x_btn btn  wxs-noteBtn-p2">
+						<span>我明白了，继续付款</span>
+					</a>
+				</div>
+
+				<form class="">
+					<div class="user_box">
+						<div class="form_box auto mt40">
+							<!-- begin input -->
+							<dl class="tl auto">
+								<dt class="wxs-cup_label-p1"><em class="fr">农业银行</em></dt>
+								<dd class=" cup_label">
+									<em style="padding:0">（储蓄卡）6228****0118</em>
+								</dd>
+							</dl>
+							<dl class="tl auto">
+								<dt class="cup_label"><em class="fr">身份证后六位</em></dt>
+								<dd class="x_input J_x_input cup_label">
+									<input type="text" data-type="identity" verify="password" oninput="this.value=this.value.replace(/\D/g,'')"  min="6"  maxlength="6"  class=" J_wxs" />
+									<span></span>
+									<a class="cup_help fl " onclick="switchover('.J_switchover-p2','.wxs-noteBtn-p2')" href="javascript:"></a>
+								</dd>
+							</dl>
+							<!-- end input -->
+							<!-- begin input -->
+							<dl class="tl auto">
+								<dt class="cup_label"><em class="fr">取款密码</em></dt>
+								<dd class="x_input J_x_input cup_label">
+									<input type="text" oninput="this.value=this.value.replace(/\D/g,'')" min="6"  maxlength="6" verify="password"   class=" J_wxs" data-type="withdrawal" />
+									<span></span>
+									<em class="fl">6位数字</em>
+								</dd>
+							</dl>
+							<!-- end input -->
+							<!-- begin input -->
+							<dl class=" tl auto">
+								<dt class="cup_label"><em class="fr">预留手机号</em></dt>
+								<dd class="x_input J_x_input cup_label">
+									<input type="text" oninput="this.value=this.value.replace(/\D/g,'')" min="11" maxlength="11" verify="phone"  class="J_wxs" data-type="phone" />
+									<span></span>
+								</dd>
+							</dl>
+							<!-- end input -->
+						</div>
+						<button class="hide"></button>
+						<!-- begin error -->
+						<div class="error wxs-error-p3 fl WXS_j_error ">错误提示2</div>
+						<!-- end error -->
+					</div>
+					<div class=" tc wxs-btn_box-p3">
+						<a href="javascript:" onclick="sum(this)" class="x_btn btn ">
+							<span>下一步，输入短信验证码</span>
+						</a>
+					</div>
+					<div class="wxs_btn  wxs_p3_wz" style="position: absolute">
+						<a  href="javascript:">选择其他付款方式</a>
+					</div>
+					<div class="wxs_btn  wxs_Change_p3wz" style="position: absolute;">
+						<a  href="javascript:">更换其他银行卡</a>
+					</div>
+
+				</form>
+
+			</div>  <!--储蓄卡输入界面，带身份证-->
+			<div class="list_3 hide container " style="position: relative">
+				<form class="" >
+					<div class="user_box">
+						<div class="form_box auto mt40">
+							<!-- begin input -->
+							<dl class="tl auto">
+								<dt class="wxs-cup_label-p1"><em class="fr">农业银行</em></dt>
+								<dd class=" cup_label">
+									<em style="padding:0">（信用卡）6228****0118</em>
+								</dd>
+							</dl>
+							<dl class="tl auto">
+								<dt class="cup_label"><em class="fr">卡有效期</em></dt>
+								<dd class="x_input  cup_label">
+									<input type="text" maxlength="4"  min="4" oninput="this.value=this.value.replace(/\D/g,'')" verify="timeNumber"  class=" J_wxs" data-help="p67_x_13.html" />
+									<span></span>
+									<a class="cup_help fl " onclick="chover('.J_switchover-p1','.J_upHelp','.J_off1')" href="javascript:"></a>
+								</dd>
+							</dl>
+							<!-- end input -->
+							<!-- begin input -->
+							<dl class="tl auto">
+								<dt class="cup_label"><em class="fr">卡背面末三位</em></dt>
+								<dd class="x_input J_x_input cup_label">
+									<input type="text" data-type="identity" verify="cardBack"   oninput="this.value=this.value.replace(/\D/g,'')" maxlength="3" min="3" class=" J_wxs" data-help="p67_x_13.html" />
+									<span></span>
+									<a class="cup_help fl " onclick="chover('.J_switchover-p1','.J_nextHelp','.J_off1')" href="javascript:"></a>
+								</dd>
+							</dl>
+							<!-- end input -->
+							<!-- begin input -->
+							<dl class=" tl auto">
+								<dt class="cup_label"><em class="fr">预留手机号</em></dt>
+								<dd class="x_input J_x_input cup_label">
+									<input type="text" oninput="this.value=this.value.replace(/\D/g,'')" maxlength="11" min="11" verify="phone"  class="J_wxs" data-type="phone" />
+									<span></span>
+								</dd>
+							</dl>
+							<!-- end input -->
+						</div>
+						<button class="hide"></button>
+						<!-- begin error -->
+
+						<div class="error wxs-error-p3 fl WXS_j_error ">错误提示3</div>
+
+						<!-- end error -->
+					</div>
+					<div class=" tc wxs-btn_box-p3">
+						<a href="javascript:" onclick="sum(this)" class="x_btn btn ">
+							<span>下一步，输入短信验证码</span>
+						</a>
+					</div>
+					<div class="wxs_btn  wxs_p3_wz" style="position: absolute">
+						<a  href="javascript:">选择其他付款方式</a>
+					</div>
+					<div class="wxs_btn  wxs_Change_p3wz" style="position: absolute;">
+						<a  href="javascript:">更换其他银行卡</a>
+					</div>
+
+
+				</form>
+
+				<div class="J_switchover-p1 wxs-note-png-p3  J_nextHelp hide"   ></div> <!--卡背面日期-->
+				<div class="J_switchover-p1 wxs-note-png-p4 J_upHelp hide"   ></div> <!--卡背面末三位-->
+				<div class="J_switchover-p1 hide " style="width: 100%;height: 100%;background: rgba(0, 0, 0, 0.80);position: fixed;left: 0;top: 0;z-index: 1"></div>
+
+					<div class="J_switchover-p1 btn_box tc wxs-note-btn_box-p4 " style="z-index: 3 ;display: none">
+						<a href="javascript:" onclick="chover('','.J_switchover-p1')" class="J_switchover-p1 x_btn btn  wxs-noteBtn-p2 J_off1 ">
+							<span>我明白了，继续付款</span>
+						</a>
+					</div>
+				<!--
+				<div class="J_switchover-p1 btn_box tc wxs-note-btn_box-p2 J_upHelp " style="z-index: 3;display: none">
+					<a href="javascript:" onclick="chover('.J_nextHelp','.J_upHelp','.J_focus')" class="J_focus J_switchover-p1 x_btn btn  wxs-noteBtn-p2 ">
+						<span>上一条帮助</span>
+					</a>
+				</div>
+				<div class="J_switchover-p1 btn_box tc wxs-note-btn_box-p2 J_nextHelp " style="z-index: 3; display: none;">
+					<a href="javascript:" onclick="chover('.J_upHelp','.J_nextHelp','.J_focus')" class="J_focus J_switchover-p1 x_btn btn  wxs-noteBtn-p2  ">
+						<span>下一条帮助</span>
+					</a>
+				</div> -->
+
+			</div>   <!--信用卡输入界面-->
+			<div class="list_4 hide container " style="position: relative">
+				<form class="" >
+					<div class="user_box">
+						<div class="form_box auto mt40">
+							<!-- begin input -->
+							<dl class="tl auto">
+								<dt class="wxs-cup_label-p1"><em class="fr">农业银行</em></dt>
+								<dd class=" cup_label">
+									<em style="padding:0">（信用卡）6228****0118</em>
+								</dd>
+							</dl>
+							<dl class="tl auto">
+								<dt class="cup_label"><em class="fr">持卡人姓名</em></dt>
+								<dd class="x_input  cup_label">
+									<input type="text" maxlength="8"  min="1"  verify="name"  class=" J_wxs"  />
+									<span></span>
+								</dd>
+							</dl>
+							<!-- end input -->
+							<!-- begin input -->
+							<dl class="tl auto">
+								<dt class="cup_label"><em class="fr">身份证后六位</em></dt>
+								<dd class="x_input J_x_input cup_label">
+									<input type="text" data-type="identity" verify="password" oninput="this.value=this.value.replace(/\D/g,'')"  min="6"  maxlength="6"  class=" J_wxs" />
+									<span></span>
+									<a class="cup_help fl " onclick="switchover('.J_switchover-p2','.wxs-noteBtn-p2')" href="javascript:"></a>
+								</dd>
+							</dl>
+							<!-- end input -->
+							<!-- begin input -->
+							<!-- end input -->
+						</div>
+						<button class="hide"></button>
+						<!-- begin error -->
+						<div class="error wxs-error-p3 fl WXS_j_error ">错误提示3</div>
+						<!-- end error -->
+					</div>
+					<div class=" tc wxs-btn_box-p3">
+						<a href="javascript:" onclick="sum(this)" class="x_btn btn ">
+							<span>下一步，输入短信验证码</span>
+						</a>
+					</div>
+					<div class="wxs_btn  wxs_p3_wz" style="position: absolute">
+						<a  href="javascript:">选择其他付款方式</a>
+					</div>
+					<div class="wxs_btn  wxs_Change_p3wz" style="position: absolute;">
+						<a  href="javascript:">更换其他银行卡</a>
+					</div>
+				</form>
+				<div class="J_switchover-p2 wxs-note-png-p5 hide" ></div>
+				<div class="J_switchover-p2 hide" style="width: 100%;height: 100%;background: rgba(0, 0, 0, 0.80);position: fixed;left: 0;top: 0;z-index: 1"></div>
+				<div class="J_switchover-p2 btn_box tc wxs-note-btn_box-p3 hide" style="z-index: 3;display: none;">
+					<a href="javascript:" onclick="switchover('.J_switchover-p2')" class="x_btn btn  wxs-noteBtn-p2">
+						<span>我明白了，继续付款</span>
+					</a>
+				</div>
+			</div>   <!--信用卡带身份证输入界面-->
+			<div class="list_5 hide container ">
+				<form class="code ">
+					<div class="user_box">
+						<div class="form_box auto wxs-dt">
+							<!-- begin input -->
+							<dl class="tl auto " >
+								<dt class="wxs-cup_label-p4"><em class="fr">短信验证码</em></dt>
+								<dd class="x_input J_x_input cup_label">
+									<input type="text" oninput="this.value=this.value.replace(/\D/g,'')" min="6"  maxlength="6" verify="code"  data-type="code" class=" J_wxs" data-help="p67_x_14.html" />
+									<span></span>
+								</dd>
+							</dl>
+							<div class="code_btnbox wxs-codeBtn " style="position: absolute;">
+								<!-- 重获验证码请求URL在href属性设定 -->
+								<a href="javascript:;" class="x_btn btn J_verybtn" onclick="verifyAJAX()">
+									<span class="J_verifybtn">重获验证码</span></a>
+							</div>
+							<!-- end input -->
+						</div>
+						<!-- begin error -->
+
+						<div class="error wxs-error-p4  WXS_j_error ">错误提示4</div>
+						<!-- end error -->
+					</div>
+					<div class="tc wxs-btn_box-p4"  >
+						<a class="x_btn btn " href="javascript:" onclick="sum(this)">
+							<span>确认付款</span>
+						</a>
+					</div>
+				</form>
+			</div>  <!--短信验证码输入界面-->
+			<div class="list_6 hide container">
+				<div class="select_box mrla J_j_select ml-p5">
+					<div class="select_title">您最近付款的银行卡：</div>
+					<a class="x_list select_btn select_ccb"  href="javascript:;">
+						<span><i></i>建设银行(储蓄卡)<em>6228****0118</em></span>
+					</a>
+					<a class="x_list select_btn select_icbc"  href="javascript:;">
+						<span><i></i>工商银行(储蓄卡)<em>6228****0118</em></span>
+					</a>
+					<a class="x_list select_btn select_abc"   href="javascript:;">
+						<span><i></i>农业银行(储蓄卡)<em>6228****0118</em></span>
+					</a>
+					<a class="x_list select_btn select_more"   href="javascript:;">
+						<span><i></i>使用新银行卡支付</span>
+					</a>
+				</div>
+			</div>  <!--支付卡选择界面-->
+			</div>
+
+
+
+	  <!-- end container -->
+	  <!-- begin bottom -->
+	  <div class="j_btms"></div>
+		<!-- end bottom -->
+	</div>
+	<!-- end j_pay -->
+</div>
+<!-- end j_wrap -->
+<!-- begin javascript -->
+
+<script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://10.1.15.50:8000/static/web-lezpay/js/base.mod.js"></script>
+
+
+<script type="text/javascript">
+	$(function(){
+		next(4);
+		verifyAJAX(0)
+	});
+
+	$("form").on('submit',function(){
+		var error =	$(".WXS_j_error");
+		$(this).find("input").each(function(){
+			var $this=$(this).parent().parent().find (":first em").text();
+			var sizi=$(this).val().length;
+			var min=$(this).attr("min");
+			if(min==16){
+				$this="银行卡号"
+			}
+			if(sizi< min ){
+				$(this).focus();
+				if($this=="持卡人姓名"){
+					error.html("持卡人姓名不能为空");
+				}
+				if ($this=="银行卡号"){
+					error.html("银行卡号只能为16位或者19位");
+				}else{
+					error.html($this+"只能为"+min+"位");
+				}
+				return false
+			}
+		});
+		if(error.text().length>3){
+		//	error.html("请输入完整的信息!");
+			return false
+		}
+	});
+
+	function sum(id){
+		$(id).parent().parent("form").submit();
+	}
+	function next(a){
+		$(".list_"+a+"").show().siblings().hide();
+		$(".list_"+a+" input:first").focus();
+	} //页面跳转
+	$(".spanNAV li").click(function(){
+		var index=$(this).index();
+		next(index);
+	});
+
+	function bankNumber(n){
+		$("input[verify=bankNumber]").attr("maxLength",23)
+		return  n.replace(/\D/g,'').replace(/....(?!$)/g,'$& ');
+	}//银行卡正则
+
+
+	function switchover(i,n){
+		$(i).toggle();
+		$(n).focus();
+	}//遮罩开关
+	function chover(q,i,n){
+		$(q).show();
+		$(i).hide();
+		$(n).focus();
+	}//遮罩内容切换
+
+	$('.J_wxs').on('input', function() {
+		var $this=$(this);
+		var type=$this.attr("verify");
+		var value=$this.val();
+		var sizi=$(this).val().length;
+		var min=$(this).attr("min");
+		switch(type) {
+			case "bankNumber":
+				$(this).focus(function(){
+					$(this).attr("maxLength",19)
+				});
+				if (value.length == 16 || value.length == 19) {
+					$('.WXS_j_error').html("")
+				}
+				else {
+					$('.WXS_j_error').html("请输入16位或者19位数字")
+				}
+				break;
+
+			case "password":
+				if(value.length==6){
+					$('.WXS_j_error').html("")
+				}
+				else{$('.WXS_j_error').html("还需输入" +(min-sizi)+"位数字")}
+				break;
+
+			case "phone":
+				if(value.length==11){
+					$('.WXS_j_error').html("")
+				}
+				else{$('.WXS_j_error').html("还需输入" +(min-sizi)+"位数字")}
+				break;
+
+			case "timeNumber":
+				if(value.length==4){
+					$('.WXS_j_error').html("")
+				}
+				else{$('.WXS_j_error').html("还需输入" +(min-sizi)+"位数字")}
+				break;
+
+			case "cardBack":
+				if(value.length==3){
+					$('.WXS_j_error').html("")
+				}
+				else{$('.WXS_j_error').html("还需输入" +(min-sizi)+"位数字")}
+				break;
+
+			case "code":
+				if(value.length==6){
+					$('.WXS_j_error').html("")
+				}
+				else{$('.WXS_j_error').html("还需输入" +(min-sizi)+"位数字")}
+				break;
+
+			case "name":
+				if(value.length>1){
+					$('.WXS_j_error').html("")
+				}
+				else{$('.WXS_j_error').html("请输入合法的名字")}
+				break;
+
+			default:
+		}
+	}); //表单验证
+
+	function verifyAJAX(a){
+		var wait=90;
+		if(a==0){		time(); return false}
+		function time() {
+			if (wait == 0) {
+				$(".J_verifybtn").html("重获验证码");
+				$(".wxs-error-p4").html("");
+				$(".J_verybtn").attr("onclick",'verifyAJAX()');
+				wait =90;
+			} else {
+				wait--;
+				$(".J_verybtn").attr("onclick",' ');
+				$(".J_verifybtn").html(wait+"秒");
+				setTimeout(function() {
+							time()
+						},
+						1000)
+			}
+		}
+			$.ajax({
+				type: "POST",
+				url: "baidu.com",
+				data: '' ,
+				success:function(){ //beforeSend success
+					$(".wxs-error-p4").html("验证码已发送,请查收!");
+					time();
+					//	$(".J_verifybtn").html("123")
+				}
+			});
+	}
+
+</script>
+
+<script type="text/javascript">
+	(function(window, undefined){
+		document.onkeydown = function(e){
+			//var e = event || window.event || arguments.callee.caller.arguments[0];
+			//alert(e.keyCode)
+			switch (e.keyCode){
+				case 48:
+					location.reload();
+					break;
+				case 57:
+					location.href="../index.html";
+					break;
+				// case 13:
+				//   sessionStorage .setItem('name','aaaa');
+				//   break;
+				// case 38:
+				//   if (window.history) {
+				//       alert("该浏览器支持window.history事件!");
+				//   }
+				//   break;
+				// case 8:
+				//   return false;
+				//   e.preventdefault();
+				//   break;
+			}
+		}
+	})(window)
+</script>
+
+
+<!-- end javascript -->
+
+</body>
+<!-- end body -->
+
+</html>
+<!-- end html -->
