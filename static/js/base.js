@@ -696,7 +696,6 @@ init.p119events = function (){
 		$this.addClass('active').next('input[type=radio]').prop('checked',true);
 		$cld.eq(_tag).removeClass('active').next('input[type=radio]').prop('checked',false);
 		_tag = $this.index();
-		alert($('.J_j_radio_btn').find('input[type=radio]:checked').size())
 	});
 }
 

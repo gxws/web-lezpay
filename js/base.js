@@ -684,6 +684,22 @@ init.P67_select_focus = function(){
  	}
 /**************************** begin p62 **************************/
 
+/**************************** begin p119 **************************/
+init.p119events = function (){
+	var _tag = 0;
+	$doc.on('click', '.J_j_radio_btn a', function(){
+		var $this = $(this),
+				$cld = $('.J_j_radio_btn').children();
+		if($this.hasClass('active')){
+			return false;
+		}
+		$this.addClass('active').next('input[type=radio]').prop('checked',true);
+		$cld.eq(_tag).removeClass('active').next('input[type=radio]').prop('checked',false);
+		_tag = $this.index();
+	});
+}
+
+/**************************** end p119 **************************/
 	$.extend(base, $.loader(init));
 
 })(window);
