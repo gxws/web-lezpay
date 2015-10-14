@@ -687,7 +687,7 @@ init.P67_select_focus = function(){
 /**************************** begin p119 **************************/
 init.p119events = function (){
 	var _tag = 0;
-	$doc.on('click', '.J_j_radio_btn a', function(){
+	$doc.on('focus', '.J_j_radio_btn a', function(){
 		var $this = $(this),
 				$cld = $('.J_j_radio_btn').children();
 		if($this.hasClass('active')){
