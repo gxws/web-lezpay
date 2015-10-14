@@ -1119,3 +1119,10 @@ input::-moz-focus-inner{padding:0;border:0;}
 .one-click .smt_bx.radio .btn.active span:after{background:url(../images/radio_checked_HD.png) 0 0 no-repeat;}
 .one-click .smt_bx.radio .btn small{font-size:24px;}
 }
+
+.j_zifubao .smt_bx .btn{margin-bottom:10px;}
+.j_zifubao .smt_bx .btn span{min-width:200px;}
+@media (min-width:1280px){
+.j_zifubao .smt_bx .btn{margin-bottom:20px;}
+.j_zifubao .smt_bx .btn span{min-width:280px;}
+}
