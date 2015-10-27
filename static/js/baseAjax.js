@@ -693,7 +693,7 @@ init.zfbTwoCode = function(){
                         location.href = $code.attr('data-timeout');
                     }
                     time();
-                },10000);
+                },120000);
             })();
         }
 }

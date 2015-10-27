@@ -5,7 +5,7 @@
 
 <!-- begin head -->
 <head>
-<title>PT-60-支付宝确认支付</title>
+<title>PT-20-微信二维码显示</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="Author" content="xiek" />
 <meta name="Keywords" content="xiek" />
@@ -41,7 +41,7 @@
 		<div class="header auto">
 	  	<!-- begin title_bx 标头,title禁用时 cont类加上 add类-->
 			<div class="title_bx fl auto">
-				<div class="title fl tc k_p119_title"><i></i></div>
+				<div class="weixin_title fl">微信</div>
 				<div class="cont fl">付款50000元</div>
 				<div class="end fl"></div>
 	  	</div>
@@ -50,18 +50,21 @@
 	</div>
 	  <!-- end header -->
 	  <!-- begin container -->
-	<div class="container">
-		<div class="k_p119_body2">
-			<div class="text">
-				<dd class="fl">付款支付宝账户：</dd>
-				<dt class="auto">dakar******@gaasasdsaddasd.com</dt>
-			</div>
-			<div class="btns">
-				<div class="smt_bx tc">
-					<a href="./p119_k_03.html" class="btn J_x_focus"><span>&nbsp;&nbsp;&nbsp;&nbsp;确定付款&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
-				</div>
-				<div class="smt_bx tc">
-					<a href="javascript:;" class="btn"><span>选择其他付款方式</span></a>
+	<div class="container weixin add_icon_weixin">
+		<div class="k_p119_body k_p119_body3">
+			<!-- ajax请求地址为img的自定义属性twoCode,发送内容为空,请求内容为{"status":"200","finished":"true"},请求频率为3s一次. -->
+			<div class="fl left"><img class="pa J_k_twoCode" twoCode="javascript:;" data-succeedUrl="http://www.baidu.com" data-waitUrl="http://weibo.com" data-timeoutUrl="http://ninghao.net" src="../static/web-lezpay/images/demo_k_p119_01.jpg"/></div>
+			<div class="auto right">
+				<!-- <div class="top">
+					<p>请打开微信，使用“扫一扫”完成本交易。</p>
+				</div> -->
+				<div class="pa bottom">
+					<div class="smt_bx tc J_k_firstbtn">
+						<a href="./p119_k_01.html" class="btn J_x_focus"><span>已完成付款</span></a>
+					</div>
+					<div class="smt_bx tc pt20 live">
+						<a href="./p119_k_02.html" class="btn"><span>选择其他付款方式</span></a>
+					</div>
 				</div>
 			</div>
 		</div>

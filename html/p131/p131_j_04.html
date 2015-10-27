@@ -5,11 +5,11 @@
 
 <!-- begin head -->
 <head>
-<title>PT-60-支付宝确认支付</title>
+<title>PT-21-支付宝二维码显示</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="Author" content="xiek" />
-<meta name="Keywords" content="xiek" />
-<meta name="Description" content="xiek" />
+<meta name="Author" content="jiqingjian" />
+<meta name="Keywords" content="jiqingjian" />
+<meta name="Description" content="jiqingjian" />
 
 <!-- begin mobile -->
 <!--
@@ -25,7 +25,7 @@
 <link rel="stylesheet" type="text/css" href="../../../public/css/public.css" />
 <link rel="stylesheet" type="text/css" href="../../static/css/base.css" />
 
-<!-- <link rel="stylesheet" type="text/css" href="http://10.1.15.50:7002/web-lezpay/css/base.mod.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="http://10.1.15.50:8000/static/web-lezpay/css/base.mod.css" /> -->
 <!-- end style -->
 
 </head>
@@ -36,7 +36,7 @@
 <!-- begin wrap -->
 <div class="wrap">
 	<!-- begin DIY -->
-	<div class="">
+	<div class="j_zfb">
 		<!-- begin header -->
 		<div class="header auto">
 	  	<!-- begin title_bx 标头,title禁用时 cont类加上 add类-->
@@ -50,21 +50,24 @@
 	</div>
 	  <!-- end header -->
 	  <!-- begin container -->
-	<div class="container">
-		<div class="k_p119_body2">
-			<div class="text">
-				<dd class="fl">付款支付宝账户：</dd>
-				<dt class="auto">dakar******@gaasasdsaddasd.com</dt>
-			</div>
-			<div class="btns">
-				<div class="smt_bx tc">
-					<a href="./p119_k_03.html" class="btn J_x_focus"><span>&nbsp;&nbsp;&nbsp;&nbsp;确定付款&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+	<div class="container add_icon_zfb">
+		<div class="k_p119_body">
+			<!-- ajax请求地址为img的自定义属性twoCode,发送内容为空,请求内容为{"status":"200","finished":"true"},请求频率为3s一次. -->
+			<div class="fl left J_j_twoCode" data-ajax="javascript:;" data-succeed="http://www.baidu.com" data-timeout="http://www.weibo.com"><img class="pa"src="../static/web-lezpay/images/demo_k_p119_01.png"/></div>
+			<div class="auto right">
+				<div class="top">
+					<!-- <p>请打开手机支付宝，使用“扫一扫”完成本次交易。</p> -->
+					<!-- <p class="tishi">开启小额免密付款更方便，<a href="javascript:;">查看操作</a></p> -->
 				</div>
 				<div class="smt_bx tc">
-					<a href="javascript:;" class="btn"><span>选择其他付款方式</span></a>
+					<a href="p131_j_02.html" class="btn J_x_focus"><span>已完成付款</span></a>
+					<a href="javascript:;" class="btn"><span>暂时不想付款，离开</span></a>
 				</div>
 			</div>
 		</div>
+<!-- 		<div class="k_p119_footer">
+			温馨提示：若需取消授权，只需打开手机支付宝，在【财富】→【账户与安全】→【账户授权管理】进行删除授权操作即可。
+		</div> -->
 	</div>
 	  <!-- end container -->
 	</div>
@@ -79,9 +82,9 @@
 <script type="text/javascript" src="../../../public/js/jquery.min.js"></script>
 <script type="text/javascript" src="../../../public/js/jquery.x.min.js"></script>
 <script type="text/javascript" src="../../static/js/base.js"></script>
-<script type="text/javascript" src="../../static/js/baseAjax.js"></script>
+<script type="text/javascript" src="../../static/js/baseAjax.js"></script> 
 
-<!-- <script type="text/javascript" src="http://10.1.15.50:7002/web-lezpay/js/base.mod.js"></script>  -->
+<!-- <script type="text/javascript" src="http://10.1.15.50:8000/static/web-lezpay/js/base.mod.js"></script> --> 
 <!-- end javascript -->
 
 </body>
