@@ -687,7 +687,7 @@ init.zfbTwoCode = function(){
                         if(d.status == 1){
                             location.href = $code.attr('data-succeed');
                         }
-                    },{"status":"1"});
+                    },{"status":"0"});
                     times+=3;
                     if(times>=240){
                         location.href = $code.attr('data-timeout');
