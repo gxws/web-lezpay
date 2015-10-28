@@ -1009,7 +1009,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 /********************** begin p131************************/
 /* .j_zfb */
 .j_zfb .k_p119_body .right .top{margin-top:61px;}
-.j_zfb .smt_bx{margin-top:53px;max-width:300px;}
+.j_zfb .smt_bx{margin-top:112px;max-width:300px;}
 .j_zfb .smt_bx.nl{margin-top:95px;}
 .j_zfb .smt_bx.nl .btn span{min-width:216px;padding:0 10px;}
 .j_zfb .smt_bx .btn{margin-bottom:20px;}
@@ -1024,7 +1024,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .j_zfb .right .bottom .at{margin-left:-36px;}
 @media (min-width:1280px){
 .j_zfb .k_p119_body .right .top{margin-top:90px;}
-.j_zfb .smt_bx{margin-top:51px;max-width:400px;}
+.j_zfb .smt_bx{margin-top:132px;max-width:400px;}
 .j_zfb .smt_bx.nl{margin-top:130px;}
 .j_zfb .smt_bx .btn{margin-bottom:30px;}
 .j_zfb .smt_bx .btn span{min-width:305px;padding:0 20px;}
@@ -1118,4 +1118,69 @@ input::-moz-focus-inner{padding:0;border:0;}
 .one-click .smt_bx.radio .btn span:after{width:30px;height:30px;display:block;position:absolute;left:10px;top:17px;content:"";background:url(../images/radio_HD.png) 0 0 no-repeat;}
 .one-click .smt_bx.radio .btn.active span:after{background:url(../images/radio_checked_HD.png) 0 0 no-repeat;}
 .one-click .smt_bx.radio .btn small{font-size:24px;}
+}
+
+.j_zifubao .smt_bx .btn{margin-bottom:10px;}
+.j_zifubao .smt_bx .btn span{min-width:200px;}
+@media (min-width:1280px){
+.j_zifubao .smt_bx .btn{margin-bottom:20px;}
+.j_zifubao .smt_bx .btn span{min-width:280px;}
+}
+.container{position:relative;}
+.container.add_icon_weixin:before,
+.container.add_icon_weixin:after,
+.container.add_icon_zfb:before,
+.container.add_icon_zfb:after{
+	position:absolute;
+	display:block;
+	color:#fff;
+	padding-left:42px;
+	width:195px;
+	left:364px;
+	font-size:17px;
+}
+.container.add_icon_weixin:before,
+.container.add_icon_zfb:before{
+	top:30px;
+}
+.container.add_icon_weixin:before{
+	content:"打开微信“扫一扫”完成本次交易。";
+	background:url(../images/icon_richscan.png) 0 0 no-repeat;
+}.container.add_icon_zfb:before{
+	content:"打开支付宝“扫一扫”完成本次交易。";
+	background:url(../images/icon_richscan2.png) 0 0 no-repeat;
+}
+.container.add_icon_weixin:after,
+.container.add_icon_zfb:after{
+	top:100px;
+	content:"你也可以“手机拍照”发好友，找人代付喔！";
+	background:url(../images/icon_camera.png) 0 0 no-repeat;
+}
+@media(min-width:1280px){
+	.container.add_icon_weixin:before,
+	.container.add_icon_weixin:after,
+	.container.add_icon_zfb:before,
+	.container.add_icon_zfb:after{
+		padding-left:46px;
+		width:590px;
+		left:640px;
+		font-size:28px;
+	}
+	.container.add_icon_weixin:before,
+	.container.add_icon_zfb:before{
+		top:80px;
+	}
+	.container.add_icon_weixin:before{
+
+		background:url(../images/icon_richscan_HD.png) 0 0 no-repeat;
+	}
+	.container.add_icon_zfb:before{
+		line-height:36px;
+		background:url(../images/icon_richscan2_HD.png) 0 0 no-repeat;
+	}
+	.container.add_icon_weixin:after,
+	.container.add_icon_zfb:after{
+		top:150px;
+		background:url(../images/icon_camera_HD.png) 0 0 no-repeat;
+	}
 }
