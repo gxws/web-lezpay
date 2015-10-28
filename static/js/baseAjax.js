@@ -660,7 +660,7 @@
     					data.status == 1 ? location.href = $code.attr('data-succeedUrl') : data.status == 2 ? location.href = $code.attr('data-waitUrl') : false ;
     				},{"status":0},null);
                     times+=3;
-                    if(times>=120){
+                    if(times>=240){
                         location.href = $code.attr('data-timeoutUrl');
                     }
     				time();
@@ -688,12 +688,12 @@ init.zfbTwoCode = function(){
                             location.href = $code.attr('data-succeed');
                         }
                     },{"status":"1"});
-                    times+=10;
+                    times+=3;
                     if(times>=240){
                         location.href = $code.attr('data-timeout');
                     }
                     time();
-                },10000);
+                },3000);
             })();
         }
 }
