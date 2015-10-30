@@ -922,7 +922,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .k_p119_body .right .top{max-height:240px;overflow:hidden;}
 .k_p119_body .right .top p{font-size:18px;color:#fff;line-height:30px;}
 .k_p119_body .right .top p>span{color:#ff0000;}
-.k_p119_footer,
+.k_p119_footer, 
 .k_p119_body .right .top .tishi{padding:40px 0 60px;font-size:16px;color:#c8c8c8;line-height:25px;}
 .k_p119_body .right .top .tishi a {color:#14d2ff;}
 .k_p119_body .right .top .tishi a:focus {color:#0f9bbe;}
