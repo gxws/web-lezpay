@@ -995,7 +995,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .c_tips a {color:#14d2ff;}
 .c_tips a:focus{color:#0f9bbe;}
 .c_code {background:url(../images/p119_01_bg011.png) no-repeat; width:640px; height:381px;}
-.c_code .smt_bx {top:397px; left:298px;}
+.c_code .smt_bx {top:287px; left:298px;}
 @media screen and (min-width:1280px){
 .c_p119box {width:1110px;}
 .c_p119box .left {background:url(../images/icon_03_pho_p119.png) no-repeat; width:440px; height:485px;}
@@ -1006,7 +1006,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .c_p119box .right .bottom .c_at { font-size:28px; line-height:65px; width:210px;}
 .c_tips {right:84px; font-size:24px;}
 .c_code {background:url(../images/p119_03_bg011.png) center no-repeat; width:1280px; height:490px;}
-.c_code .smt_bx {top:535px; left:615px;}
+.c_code .smt_bx {top:535px; left:368px;}
 }
 /********************** end p119 ************************/
 /********************** begin p131************************/
