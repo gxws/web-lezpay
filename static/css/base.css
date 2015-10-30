@@ -926,7 +926,8 @@ input::-moz-focus-inner{padding:0;border:0;}
 .k_p119_body .right .top .tishi{padding:40px 0 60px;font-size:16px;color:#c8c8c8;line-height:25px;}
 .k_p119_body .right .top .tishi a {color:#14d2ff;}
 .k_p119_body .right .top .tishi a:focus {color:#0f9bbe;}
-.k_p119_body .right .bottom{position:absolute;left:46px;top:191px;}
+.k_p119_body .right .bottom{bottom:12px;left:46px;top:191px;}
+.k_p119_body .right .bottom.ad{position:absolute;left:46px;top:191px;}
 .k_p119_body .right .bottom .firstbtn{padding-bottom:15px;}
 .k_p119_body .right .bottom .firstbtn span{min-width:168px;}
 @media screen and (min-width:1280px){
@@ -938,7 +939,8 @@ input::-moz-focus-inner{padding:0;border:0;}
 .k_p119_body .right .top p{font-size:28px;line-height:42px;}
 .k_p119_footer,
 .k_p119_body .right .top .tishi{padding-top:44px;font-size:24px;line-height:34px;}
-.k_p119_body .right .bottom{left:134px;top:258px;}
+.k_p119_body .right .bottom{position:absolute;bottom:21px;left:134px;}
+.k_p119_body .right .bottom.ad{top:258px;left:134px;}
 .k_p119_body .right .bottom .firstbtn{padding-bottom:25px;}
 .k_p119_body .right .bottom .firstbtn span{min-width:238px;}
 }
@@ -1009,7 +1011,8 @@ input::-moz-focus-inner{padding:0;border:0;}
 /********************** begin p131************************/
 /* .j_zfb */
 .j_zfb .k_p119_body .right .top{margin-top:61px;}
-.j_zfb .smt_bx{padding-top:112px;max-width:300px;}
+.j_zfb .smt_bx{margin-top:112px;max-width:300px;}
+.j_zfb .add_icon_zfb .smt_bx{margin-top:0;padding-top:112px;max-width:300px;}
 .j_zfb .smt_bx.nl{margin-top:95px;}
 .j_zfb .smt_bx.nl .btn span{min-width:216px;padding:0 10px;}
 .j_zfb .smt_bx .btn{margin-bottom:20px;}
@@ -1024,7 +1027,8 @@ input::-moz-focus-inner{padding:0;border:0;}
 .j_zfb .right .bottom .at{margin-left:-36px;}
 @media (min-width:1280px){
 .j_zfb .k_p119_body .right .top{margin-top:90px;}
-.j_zfb .smt_bx{padding-top:132px;max-width:400px;}
+.j_zfb .smt_bx{margin-top:132px;max-width:400px;}
+.j_zfb .add_icon_zfb .smt_bx{margin-top:0;padding-top:132px;max-width:400px;}
 .j_zfb .smt_bx.nl{margin-top:130px;}
 .j_zfb .smt_bx .btn{margin-bottom:30px;}
 .j_zfb .smt_bx .btn span{min-width:305px;padding:0 20px;}
