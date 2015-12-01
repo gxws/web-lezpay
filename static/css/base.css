@@ -33,6 +33,25 @@ input::-moz-focus-inner{padding:0;border:0;}
 .footer.input{background:url(../images/p62_0002_footer_bg4.jpg) 0 0 no-repeat;}
 .footer.f4{background-image:url(../images/bg_x_papago_footer_f4.png);}
 .footer.pg{background-image:url(../images/bg_x_papago_footer_pg.png);}
+.footer.hot-tel:before{
+	position:absolute;
+	content:"客服热线：400-00300-783";
+	display:block;
+	top:17px;
+	color:#969696;
+	font-size:18px;
+	left:281px;
+}
+.footer.del:after{
+	position:absolute;
+	content:"";
+	width:98px;
+	height:20px;
+	background:url(../images/f4_icon.png) 0 0 no-repeat;
+	display:block;
+	top:15px;
+	left:512px;
+}
 .footer.btns{width:555px;height:56px;background-repeat:no-repeat;background-image:url(../images/bg_x_papago_footer.png);padding-left:85px;}
 .footer li { float:left; display:block; width:92px; height:56px; line-height:56px; background:url(../images/640_foot_li.png) right no-repeat;}
 .footer li a { color:#969696; display:block; font-size:16px; width:92px; height:56px;}
@@ -50,6 +69,18 @@ input::-moz-focus-inner{padding:0;border:0;}
 .footer.input{background:url(../images/p62_0003_footer_bg4.jpg) 0 0 no-repeat;}
 .footer.f4{background-image:url(../images/bg_x_papago_footer_f4_hd.png);}
 .footer.pg{background-image:url(../images/bg_x_papago_footer_pg_hd.png);}
+.footer.hot-tel:before{
+	top:25px;
+	font-size:24px;
+	left:406px;
+}
+.footer.del:after{
+	width:128px;
+	height:25px;
+	background:url(../images/f4_icon_HD.png) 0 0 no-repeat;
+	top:25px;
+	left:1104px;
+}
 .footer li { width:122px; height:85px; line-height:85px; background:url(../images/1280_foot_li.png) right no-repeat;}
 .footer li a { font-size:24px; width:120px; height:85px;}
 .footer li a:focus {background-image:url(../images/1280_foot_bgho.png); color:#fff;}
