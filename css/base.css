@@ -33,6 +33,25 @@ input::-moz-focus-inner{padding:0;border:0;}
 .footer.input{background:url(../images/p62_0002_footer_bg4.jpg) 0 0 no-repeat;}
 .footer.f4{background-image:url(../images/bg_x_papago_footer_f4.png);}
 .footer.pg{background-image:url(../images/bg_x_papago_footer_pg.png);}
+.footer.hot-tel:before{
+	position:absolute;
+	content:"客服热线：400-00300-783";
+	display:block;
+	top:17px;
+	color:#969696;
+	font-size:18px;
+	left:281px;
+}
+.footer.del:after{
+	position:absolute;
+	content:"";
+	width:98px;
+	height:20px;
+	background:url(../images/f4_icon.png) 0 0 no-repeat;
+	display:block;
+	top:15px;
+	left:512px;
+}
 .footer.btns{width:555px;height:56px;background-repeat:no-repeat;background-image:url(../images/bg_x_papago_footer.png);padding-left:85px;}
 .footer li { float:left; display:block; width:92px; height:56px; line-height:56px; background:url(../images/640_foot_li.png) right no-repeat;}
 .footer li a { color:#969696; display:block; font-size:16px; width:92px; height:56px;}
@@ -50,6 +69,18 @@ input::-moz-focus-inner{padding:0;border:0;}
 .footer.input{background:url(../images/p62_0003_footer_bg4.jpg) 0 0 no-repeat;}
 .footer.f4{background-image:url(../images/bg_x_papago_footer_f4_hd.png);}
 .footer.pg{background-image:url(../images/bg_x_papago_footer_pg_hd.png);}
+.footer.hot-tel:before{
+	top:25px;
+	font-size:24px;
+	left:406px;
+}
+.footer.del:after{
+	width:128px;
+	height:25px;
+	background:url(../images/f4_icon_HD.png) 0 0 no-repeat;
+	top:25px;
+	left:1104px;
+}
 .footer li { width:122px; height:85px; line-height:85px; background:url(../images/1280_foot_li.png) right no-repeat;}
 .footer li a { font-size:24px; width:120px; height:85px;}
 .footer li a:focus {background-image:url(../images/1280_foot_bgho.png); color:#fff;}
@@ -918,7 +949,8 @@ input::-moz-focus-inner{padding:0;border:0;}
 .k_p119_body{height:330px;width:580px;margin:0 auto;}
 .k_p119_body .left{width:290px;height:290px;margin-top:22px;background:#fff;}
 .k_p119_body .left img{display:block;width:290px;height:290px;}
-.k_p119_body .right{padding-top:17px;padding-left:30px;position:relative;}
+
+.k_p119_body .right{padding-top:17px;padding-left:30px;position:relative;min-height:320px;}
 .k_p119_body .right .top{max-height:240px;overflow:hidden;}
 .k_p119_body .right .top p{font-size:18px;color:#fff;line-height:30px;}
 .k_p119_body .right .top p>span{color:#ff0000;}
@@ -927,7 +959,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .k_p119_body .right .top .tishi a {color:#14d2ff;}
 .k_p119_body .right .top .tishi a:focus {color:#0f9bbe;}
 .k_p119_body .right .bottom{bottom:12px;left:46px;top:191px;}
-.k_p119_body .right .bottom.ad{position:absolute;left:46px;top:191px;}
+.k_p119_body .right .bottom.ad{position:absolute;left:38px;top:191px;}
 .k_p119_body .right .bottom .firstbtn{padding-bottom:15px;}
 .k_p119_body .right .bottom .firstbtn span{min-width:168px;}
 @media screen and (min-width:1280px){
@@ -994,7 +1026,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .c_tips a {color:#14d2ff;}
 .c_tips a:focus{color:#0f9bbe;}
 .c_code {background:url(../images/p119_01_bg011.png) no-repeat; width:640px; height:381px;}
-.c_code .smt_bx {top:397px; left:298px;}
+.c_code .smt_bx {top:287px; left:298px;}
 @media screen and (min-width:1280px){
 .c_p119box {width:1110px;}
 .c_p119box .left {background:url(../images/icon_03_pho_p119.png) no-repeat; width:440px; height:485px;}
@@ -1005,7 +1037,7 @@ input::-moz-focus-inner{padding:0;border:0;}
 .c_p119box .right .bottom .c_at { font-size:28px; line-height:65px; width:210px;}
 .c_tips {right:84px; font-size:24px;}
 .c_code {background:url(../images/p119_03_bg011.png) center no-repeat; width:1280px; height:490px;}
-.c_code .smt_bx {top:535px; left:615px;}
+.c_code .smt_bx {top:368px; left:615px;}
 }
 /********************** end p119 ************************/
 /********************** begin p131************************/
