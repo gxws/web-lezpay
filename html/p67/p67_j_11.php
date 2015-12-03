@@ -27,7 +27,7 @@ if(isset($css) && !empty($css)){
 <!-- <link rel="stylesheet" type="text/css" href="../static/public/css/_public.css" />
 <link rel="stylesheet" type="text/css" href="../static/web-lezpay/css/_base.css" /> -->
 
-<link rel="stylesheet" type="text/css" href="http://10.1.15.50:7002/web-lezpay/css/_base.mod.css" />
+<link rel="stylesheet" type="text/css" href="http://10.1.15.50:8000/static/web-lezpay/static/css/_base.mod.css" />
 <?php } ?>
 <!-- end style -->
 
@@ -38,7 +38,7 @@ if(isset($css) && !empty($css)){
 <body>
 
 <!-- begin x_wrap -->
-<div class="x_wrap pa j_cup" style="background-image:url(../static/web-lezpay/images/0001_cup_bg.jpg);">
+<div class="x_wrap pa j_cup" style="background-image:url(../static/images/0001_cup_bg.jpg);">
 
 	<!-- begin x_date -->
 	<div class="x_date pa">{05月09日}</div>
@@ -50,7 +50,7 @@ if(isset($css) && !empty($css)){
 			<input type="text" class="input cup_input text1 pa" size="6"/>
 			<input type="text" class="input cup_input text2 pa" size="6"/>
 			<div class="error pa">错误提示信息区域！</div>
-			<a href="javascript:;" class="cup_btn x_btn_1 pa"><img src="../static/web-lezpay/images/x_btn_1.png" /></a>
+			<a href="javascript:;" class="cup_btn x_btn_1 pa"><img src="../static/images/x_btn_1.png" /></a>
 		</div>
 	</form>
 </div>
@@ -70,7 +70,7 @@ if(isset($css) && !empty($css)){
 
 <!-- <script type="text/javascript" src="../static/web-lezpay/js/_base.js"></script> -->
 
-<script type="text/javascript" src="http://10.1.15.50:7002/web-lezpay/js/_base.mod.js"></script>
+<!-- <script type="text/javascript" src="http://10.1.15.50:7002/web-lezpay/js/_base.mod.js"></script> -->
 <?php } ?>
 <!--
 <script type="text/javascript">

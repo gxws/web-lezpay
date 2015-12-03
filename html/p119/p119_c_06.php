@@ -74,10 +74,12 @@ if(isset($css) && !empty($css)){
 	  <!-- end container -->
 	</div>
 	<!-- end DIY -->
-		<div class="pa footer" style="background-image:url(../static/web-papa-go/images/bg_x_papago_footer.png);">
-			<a class="pa index" href="javascript:;"><img src="../static/web-papa-go/images/01_foot_index.png" /></a>
-			<a class="pa home" href="javascript:;"><img src="../static/web-papa-go/images/01_foot_home.png" /></a>
-			<a class="pa prev" href="javascript:;"><img src="../static/web-papa-go/images/01_foot_prev.png" /></a>
+		<div class="pa footer" style="background-image:url(../../static/images/bg_x_papago_footer.png);">
+			<a class="pa index" href="javascript:;"><img src="../../static/images/01_foot_index.png" /></a>
+			<a class="pa home" href="javascript:;"><img src="../../static/images/01_foot_home.png" /></a>
+			<!-- <a class="pa prev" href="javascript:;"><img src="../../static/images/01_foot_prev.png" /></a> -->
+			<div class="pa hot-tel">客服热线：400-00300-783</div>
+  		<div class="pa del"></div>
 		</div>
 	<!-- end bottom -->
 </div>

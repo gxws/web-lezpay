@@ -27,7 +27,7 @@ if(isset($css) && !empty($css)){
 <!-- <link rel="stylesheet" type="text/css" href="../static/public/css/_public.css" />
 <link rel="stylesheet" type="text/css" href="../static/web-lezpay/css/_base.css" /> -->
 
-<link rel="stylesheet" type="text/css" href="http://10.1.15.50:7002/web-lezpay/css/_base.mod.css" />
+<link rel="stylesheet" type="text/css" href="http://10.1.15.50:8000/static/web-lezpay/css/_base.mod.css" />
 <?php } ?>
 <!-- end style -->
 
